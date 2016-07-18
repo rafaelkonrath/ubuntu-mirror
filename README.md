@@ -28,12 +28,12 @@ Only machines from the local [RFC1918](https://tools.ietf.org/html/rfc1918) rang
     
     functions to create a mirro repository, using apt-mirror(recommend) or rsync:
 
-    docker build -t myubunturepo .
+    docker build -t MyUbuntuRepo .
 
 
 ### Usage with Attach persistent/shared directories
 
-    docker run -d -p 80:80 -p 2812:2812 -v <sites-enabled-dir>/data:/data -v <sites-enabled-dir>/data:/var/log/nginx -v <sites-enabled-dir>/mirror:/mirror myubunturepo
+    docker run -d -p 80:80 -p 2812:2812 -v <sites-enabled-dir>/data:/data -v <sites-enabled-dir>/data:/var/log/nginx -v <sites-enabled-dir>/mirror:/mirror MyUbuntuRepo
 
 
 The first time the server runs will take some time to sync your local repository.
